@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_splash_icon.jpg.flat",
+        "source": "izletobu.com.app-main-40:/drawable/splash_icon.jpg"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "izletobu.com.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "izletobu.com.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_top_background.png.flat",
+        "source": "izletobu.com.app-main-40:/drawable/top_background.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_password.png.flat",
+        "source": "izletobu.com.app-main-40:/drawable/password.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_ic_launcher_background.xml.flat",
+        "source": "izletobu.com.app-main-40:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_name.png.flat",
+        "source": "izletobu.com.app-main-40:/drawable/name.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/layout_activity_splash.xml.flat",
+        "source": "izletobu.com.app-main-40:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_intro.jpeg.flat",
+        "source": "izletobu.com.app-main-40:/drawable/intro.jpeg"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/layout_activity_login.xml.flat",
+        "source": "izletobu.com.app-main-40:/layout/activity_login.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "izletobu.com.app-pngs-34:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/layout_activity_signup.xml.flat",
+        "source": "izletobu.com.app-main-40:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_btn_login.png.flat",
+        "source": "izletobu.com.app-main-40:/drawable/btn_login.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/drawable_rounded_edittext.xml.flat",
+        "source": "izletobu.com.app-main-40:/drawable/rounded_edittext.xml"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/mipmap-anydpi-v26_logo.png.flat",
+        "source": "izletobu.com.app-main-40:/mipmap-anydpi-v26/logo.png"
+    },
+    {
+        "merged": "izletobu.com.app-merged_res-38:/layout_activity_map.xml.flat",
+        "source": "izletobu.com.app-main-40:/layout/activity_map.xml"
+    }
+]

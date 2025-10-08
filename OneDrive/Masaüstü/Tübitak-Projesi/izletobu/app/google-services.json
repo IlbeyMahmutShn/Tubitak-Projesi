@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "120827105260",
+    "firebase_url": "https://carpediemfit-7afeb-default-rtdb.firebaseio.com",
+    "project_id": "carpediemfit-7afeb",
+    "storage_bucket": "carpediemfit-7afeb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120827105260:android:5e64e5932c4c185f37bac9",
+        "android_client_info": {
+          "package_name": "izletobu.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHEv6tSlceP_MejKDWWoY9gpnButArMAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

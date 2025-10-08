@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>İzletobu</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="shortcut icon" type="png" href="/images/Logo.png" />
+</head>
+
+<body>
+  <!-- header bölümü başlangıc -->
+
+  <header class="header">
+    <a href="/index.html" class="logo">
+      <img src="/images/Logo.png" alt="logoya ulaşılamıyor!" />
+    </a>
+    <nav class="navbar">
+      <a href="/index.html" class="active">Ana Sayfa</a>
+      <a href="/pages/Vizyon.html">Vizyonumuz</a>
+      <a href="/pages/Yollar.html">Yollar</a>
+      <a href="/pages/Hakkında.html">Hakkımızda</a>
+      <a href="/pages/İletişim.html">İletişim</a>
+    </nav>
+
+    <div class="buttons">
+      <button id="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="search-form">
+      <input style="background-color: yellow" type="text" class="search-input" id="search-box"
+        placeholder="Search here" />
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="cart-items-container">
+    </div>
+  </header>
+
+  <!-- header bölümü bitiş -->
+
+  <!-- anasayfa bölümü başlangıç -->
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3>
+        Eve hızlı gidiş
+      </h3>
+      <p>
+        İzletobu sayesinde aracımın nerede, nasıl ve ne hızda olduğunu kolayca takip edebiliyorum.
+        Yolculuklar artık hem daha güvenli hem de içim rahat.
+      </p>
+      <a href="/pages/Giris.html" class="btn">Daha Fazlası...</a>
+    </div>
+  </section>
+
+  <!-- anasayfa bölümü bitiş -->
+
+  <!-- üyelik bölümü başlangıç -->
+
+  <section class="menu" id="menu">
+    <h1 class="H1">Kullandığımız Devre Kartları</h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="box-head">
+          <img src="/images/GY-NEO6MN2.png" alt="menü resmine ılaşılamıyor!" />
+          <span class="menu-category">Arduino</span>
+          <h3>GY-NEO6MN2 Gps Modülü</h3>
+        </div>
+        <div class="box-buttom">
+          <a href="https://www.robotistan.com/gy-neo6mv2-gps-modulu-ucus-kontrol-sistem-gpsi" class="btn">Daha fazlası...</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-head">
+          <img src="/images/MPU6050.png" alt="menü resmine ılaşılamıyor!" />
+          <span class="menu-category">Arduino</span>
+          <h3>MPU6050 Modülü</h3>
+        </div>
+        <div class="box-buttom">
+          <a href="https://www.robotistan.com/mpu6050-6-eksen-ivme-ve-gyro-sensoru-6-dof-3-axis-accelerometer-and-gyros#:~:text
+          =MPU%2D6050%2C%20%C3%A7e%C5%9Fitli%20hobi%2C,hassas%20bir%20%C5%9Fekilde%20%C3%B6l%C3%A7menizi%20sa%C4%9Flar." class="btn">Daha fazlası...</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-head">
+          <img src="/images/sharp.png" alt="menü resmine ılaşılamıyor!" />
+          <span class="menu-category">Arduino</span>
+          <h3>Sharp GP2Y0A21YK Modülü</h3>
+        </div>
+        <div class="box-buttom">
+          <a href="https://www.robotistan.com/sharp-gp2y0a21yk-kizilotesi-sensor-10-80-cm" class="btn">Daha fazlası...</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-head">
+          <img src="/images/SDKart.jpeg" alt="menü resmine ılaşılamıyor!" />
+          <span class="menu-category">Arduino</span>
+          <h3>SD Kart Okuyucu Modülü</h3>
+        </div>
+        <div class="box-buttom">
+          <a href="https://www.robotistan.com/mikro-sd-kart-modulu-1" class="btn">Daha fazlası...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- üyelik bölümü bitiş -->
+
+  <!-- ürünler bölümü başlangıç -->
+
+  <section class="products" id="products">
+    <h1 class="H1">Amaçlarımız</h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="box-head">
+          <span class="tittle">İzletobu</span>
+          <a href="#" class="name">Entegre Devremiz</a>
+        </div>
+        <div class="image">
+          <img src="/images/modul.jpg" alt="Resim yüklenemedi!" />
+        </div>
+        <div class="box-buttom">
+          <div class="info">
+            <span class="amouth">Yollardan alıncak verileri toplamak ve kaydetmek</span>
+          </div>
+          <div class="products-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-head">
+          <span class="tittle">İzletobu</span>
+          <a href="#" class="name">Veri Kaynaklarımız</a>
+        </div>
+        <div class="image">
+          <img src="/images/Yollar.png" alt="Resim yüklenemedi!" />
+        </div>
+        <div class="box-buttom">
+          <div class="info">
+            <span class="amouth">Veriyi topladığımız kaynaklarımız</span>
+          </div>
+          <div class="products-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="box dark-bg">
+        <div class="box-head">
+          <span class="tittle">İzletobu</span>
+          <a href="#" class="name">Kullanıcıya hizmetimiz</a>
+        </div>
+        <div class="image">
+          <img src="/images/Hizmet.png" alt="Resim yüklenemedi!" />
+        </div>
+        <div class="box-buttom">
+          <div class="info">
+            <span class="amouth">Kullanıcı ile verilerimizin paylaşımı</span>
+          </div>
+          <div class="products-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ürünler bölümü bitiş -->
+
+  <!-- hakkında bölümü başlangıç -->
+
+  <section class="about" id="about">
+    <h1 class="H1">HAKKIMIZDA</h1>
+    <div class="row">
+      <div class="image">
+        <img src="/images/Harita.png" alt="Resim yüklenemedi!" />
+      </div>
+      <div class="content">
+        <h3>Neden bizi tercih etmelisiniz ?</h3>
+        <ul>
+          <h1><b>Hakkımızda</b></h1>
+          <li>
+            <h4>İzleToBu, TÜBİTAK destekli projemiz kapsamında geliştirilen yenilikçi bir platformdur. Amacımız, insanların seyahat 
+              deneyimlerini daha kolay, güvenli ve verimli hale getirmektir. Projemiz, yol türü ve koşullarını doğru şekilde analiz ederek,
+               kullanıcıların en uygun ve konforlu güzergahı seçmesine olanak sağlar.
+            </h4>
+          </li>
+          <li>
+            <h4>Gerçek zamanlı sensör verileriyle desteklenen sistemimiz, yol yüzeyi, hız ve çevresel koşulları değerlendirerek
+               seyahat kalitesini artırmayı hedefler. Böylece kullanıcılar, seyahat sırasında karşılaşabilecekleri zorlukları önceden 
+               görerek daha bilinçli kararlar alabilir.
+               İzleToBu, kullanıcı dostu arayüzü ve yüksek doğruluklu veri 
+               analizi ile seyahat deneyimlerinizi iyileştirirken, bilimsel araştırma ve uygulamalarda da güvenilir bir çözüm sunar.
+            </h4>
+          </li>
+        </ul>
+        <a href="/pages/Hakkında.html" class="btn">Daha Fazla</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- hakkında bölümü bitiş -->
+
+  <!-- müşteri yorumu bölümü başlangıç -->
+
+  <section class="review" id="review">
+    <h1 class="H1">DEĞERLENDİRMELERİMİZ</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="/images/quote.png" alt="Resim yüklenemedi!" />
+        <p>
+          İzleToBu, benim için gerçek bir keşif oldu.
+          Bu platform, yol türlerini ve seyahat koşullarını gerçek zamanlı sensör verileriyle analiz ederek en uygun güzergahı sunuyor.
+          Yol güvenliği ve seyahat konforu açısından sunduğu bilgiler sayesinde yolculuklarım çok daha rahat ve stressiz hale geldi.
+          İzleToBu’nun sunduğu analizleri takip ederken, seyahatimin her anında güvende olduğumu hissetmek benim için büyük bir avantaj oldu.
+          Herkesin kolay ve güvenli seyahat edebilmesi için gerekli tüm teknolojiyi bir arada sunuyorlar ve bu yüzden deneyimlerimi paylaşmaktan mutluluk duyuyorum.
+          Kesinlikle seyahatlerde vazgeçilmez bir yardımcı!
+        </p>
+        <img src="/images/avatar-1.png" alt="Resim yüklenemedi!" class="users" />
+        <h3>Damla Öztürk</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="box">
+        <img src="/images/quote.png" alt="Resim yüklenemedi!" />
+        <p>
+          İzleToBu, seyahat alışkanlıklarımı tamamen değiştirdi! Özellikle yol türü ve koşullarını anlık analiz eden sistemi,
+          herkesin kolayca kullanabileceği şekilde tasarlanmış. Gelişmiş sensör verileri ve gerçek zamanlı geri bildirimler sayesinde,
+            artık daha güvenli ve konforlu seyahatler yapıyorum. Ayrıca, uygulamanın sunduğu güzergah önerileri gerçekten çok kullanışlı.
+            Tavsiye ederim, rahat ve bilinçli seyahat etmek isteyen herkesin denemesi gereken bir platform!
+        </p>
+        <img src="/images/avatar-2.png" alt="Resim yüklenemedi!" class="users" />
+        <h3>Ataberk Doğanay</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <div class="box">
+        <img src="/images/quote.png" alt="Resim yüklenemedi!" />
+        <p>
+          Seyahat deneyimimde yeni bir dönemece ihtiyacım vardı ve İzleToBu tam da aradığım çözüm oldu.
+          Uygulama üzerinden eriştiğim yol türü analizleri ve gerçek zamanlı öneriler sayesinde seyahatlerim artık daha kolay ve güvenli geçiyor. Her özellik,
+          kullanıcının ihtiyaçları düşünülerek özel olarak tasarlanmış. İzleToBu, seyahat alışkanlıklarında gerçekten fark yaratıyor!
+        </p>
+        <img src="/images/avatar-3.png" alt="Resim yüklenemedi!" class="users" />
+        <h3>Melek Sarıkaya</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- müşteri yorumu bölümü bitiş -->
+
+  <!-- iletişim bölümü başlangıç -->
+
+  <section class="contact" id="contact">
+    <h1 class="H1">BİZE ULAŞIN</h1>
+    <div class="row">
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.9595107237137!2d39.18645341174878!3d38.67279857165519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4076c03ed3e33d0d%3A0xd1d31031c6bd5182!2sFirat%20%C3%9Cniversitesi%20bilgisayar%20m%C3%BChendisli%C4%9Fi%20fak%C3%BCltesi!5e0!3m2!1str!2sfr!4v1748514351185!5m2!1str!2sfr"
+        allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form method="post" action="post">
+        <h3>Bizimle Temasa Geç!</h3>
+        <div class="input-box">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="İsim" />
+        </div>
+        <div class="input-box">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Soyisim" />
+        </div>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="E-posta" />
+        </div>
+        <div class="input-box">
+          <i class="fas fa-phone"></i>
+          <input type="number" placeholder="Telefon" />
+        </div>
+        <input type="submit" class="btn" value="Şimdi İletişime Geç" />
+      </form>
+    </div>
+  </section>
+
+  <!-- iletişim bölümü bitiş -->
+
+  <!-- alt bilgi bölümü başlangıç -->
+
+  <section class="footer">
+    <div class="search">
+      <input type="text" class="search-input" placeholder="Ara" />
+      <button class="btn btn-primary">Search</button>
+    </div>
+    <div class="share">
+      <a href="https://www.instagram.com/ilbey.ms/" class="fab fa-instagram"></a>
+      <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjcyODEyMjc3LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"
+        class="fab fa-facebook"></a>
+      <a href="https://wa.me/qr/SWJH6IXDP5EDN1" class="fab fa-whatsapp"></a>
+    </div>
+    <div class="links">
+      <a href="/index.html">Ana Sayfa</a>
+      <a href="/pages/Vizyon.html">Vizyonumuz</a>
+      <a href="/pages/Yollar.html">Yollar</a>
+      <a href="/pages/Hakkında.html">Hakkımızda</a>
+      <a href="/pages/İletişim.html">İletişim</a>
+    </div>
+    <div class="credit">
+      © 2025 Sayfanın yapımcısı <span>İzletobu</span> |
+      <span style="color: yellow">Tüm haklar saklıdır.</span>
+    </div>
+  </section>
+
+  <!-- alt bilgi bölümü bitiş -->
+
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>

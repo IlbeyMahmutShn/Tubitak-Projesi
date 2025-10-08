@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>İzletobu</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/Kayıt.css" />
+    <link rel="shortcut icon" type="png" href="/images/Logo.png" />
+</head>
+
+<body>
+    <!-- header bölümü başlangıc -->
+    <header class="header">
+        <a href="/index.html" class="logo">
+            <img src="/images/Logo.png" alt="logoya ulaşılamıyor!" />
+        </a>
+        <nav class="navbar">
+            <a href="/index.html" class="active">Ana Sayfa</a>
+            <a href="/pages/Vizyon.html">Vizyonumuz</a>
+            <a href="/pages/Yollar.html">Yollar</a>
+            <a href="/pages/Hakkında.html">Hakkımızda</a>
+            <a href="/pages/İletişim.html">İletişim</a>
+        </nav>
+        <div class="buttons">
+            <button id="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="search-form">
+            <input style="background-color: yellow" type="text" class="search-input" id="search-box"
+                placeholder="Search here" />
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="cart-items-container">
+        </div>
+    </header>
+    <!-- header bölümü bitiş -->
+
+    <section class="register-section">
+        <div class="register-container">
+            <h1 class="H1">Üye Ol</h1>
+            <form id="register-form" class="register-form" onsubmit="signup(event)">
+                <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" id="username" placeholder="Kullanıcı Adı" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="email" placeholder="E-posta" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Şifre" required>
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Şifreyi Onayla"
+                        required>
+                </div>
+                <button type="submit" id="submit" class="btn">Üye Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- alt bilgi bölümü başlangıç -->
+    <section class="footer">
+        <div class="search">
+            <input type="text" class="search-input" placeholder="Ara" />
+            <button class="btn btn-primary">Search</button>
+        </div>
+        <div class="share">
+            <a href="https://www.instagram.com/ilbey.ms/" class="fab fa-instagram"></a>
+            <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjcyODEyMjc3LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"
+                class="fab fa-facebook"></a>
+            <a href="https://wa.me/qr/SWJH6IXDP5EDN1" class="fab fa-whatsapp"></a>
+        </div>
+        <div class="links">
+            <a href="/index.html">Ana Sayfa</a>
+            <a href="/pages/Vizyon.html">Vizyonumuz</a>
+            <a href="/pages/Yollar.html">Yollar</a>
+            <a href="/pages/Hakkında.html">Hakkımızda</a>
+            <a href="/pages/İletişim.html">İletişim</a>
+        </div>
+        <div class="credit">
+            © 2025 Sayfanın yapımcısı <span>İzletobu</span> |
+            <span style="color: yellow">Tüm haklar saklıdır.</span>
+        </div>
+    </section>
+    <!-- alt bilgi bölümü bitiş -->
+
+    <script src="/js/script.js"></script>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyArIfSs-53cK4GdXL_qPd3PA_q0t-CcFn0",
+    authDomain: "carpediemfit-7afeb.firebaseapp.com",
+    databaseURL: "https://carpediemfit-7afeb-default-rtdb.firebaseio.com",
+    projectId: "carpediemfit-7afeb",
+    storageBucket: "carpediemfit-7afeb.appspot.com",
+    messagingSenderId: "120827105260",
+    appId: "1:120827105260:web:e2fd99d2c33d7b2337bac9",
+    measurementId: "G-J18WC47TZZ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getDatabase(app);
+
+  document.getElementById("register-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm_password").value;
+
+    if (password !== confirmPassword) {
+      alert("Şifreler eşleşmiyor!");
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        const uid = user.uid;
+
+        // Realtime Database'e kayıt
+        set(ref(db, 'users/' + uid), {
+          username: username,
+          email: email,
+          password: password
+        }).then(() => {
+          alert("Kayıt başarılı!");
+          window.location.href = "/pages/Giris.html"; // Yönlendirme
+        }).catch((error) => {
+          alert("Veritabanı hatası: " + error.message);
+        });
+      })
+      .catch((error) => {
+        alert("Kayıt başarısız: " + error.message);
+      });
+  });
+</script>
+
+</body>
+
+</html>

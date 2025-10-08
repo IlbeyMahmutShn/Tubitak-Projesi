@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>İzletobu</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="shortcut icon" type="png" href="/images/Logo.png" />
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+  />
+  <script 
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+  </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 800px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+  <!-- header bölümü başlangıc -->
+
+  <header class="header">
+    <a href="/index.html" class="logo">
+      <img src="/images/Logo.png" alt="logoya ulaşılamıyor!" />
+    </a>
+    <nav class="navbar">
+      <a href="/index.html">Ana Sayfa</a>
+      <a href="/pages/Vizyon.html">Vizyonumuz</a>
+      <a href="/pages/Yollar.html" class="active">Yollar</a>
+      <a href="/pages/Hakkında.html">Hakkımızda</a>
+      <a href="/pages/İletişim.html">İletişim</a>
+    </nav>
+
+    <div class="buttons">
+      <button id="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="search-form">
+      <input style="background-color: yellow" type="text" class="search-input" id="search-box"
+        placeholder="Search here" />
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="cart-items-container">
+    </div>
+  </header>
+
+  <!-- header bölümü bitiş -->
+
+  <!-- üyelik bölümü başlangıç -->
+
+ 
+    
+  <div id="map"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // 1) Firebase Proje config bilgilerini kendi Firebase Console’dan alıp buraya koy
+    const firebaseConfig = {
+      apiKey: "AIzaSyArIfSs-53cK4GdXL_qPd3PA_q0t-CcFn0",
+      authDomain: "carpediemfit-7afeb.firebaseapp.com",
+      databaseURL: "https://carpediemfit-7afeb-default-rtdb.firebaseio.com",
+      projectId: "carpediemfit-7afeb",
+      storageBucket: "carpediemfit-7afeb.firebasestorage.app",
+      messagingSenderId: "120827105260",
+      appId: "1:120827105260:web:e2fd99d2c33d7b2337bac9",
+     measurementId: "G-J18WC47TZZ"
+    };
+
+    // 2) Firebase'i başlat
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // 3) Leaflet haritasını oluştur
+    var map = L.map('map').setView([38.6746, 39.2227], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap katkıda bulunanlar'
+    }).addTo(map);
+
+    // 4) Firebase Realtime Database’den 'tahminler' verisini oku ve haritaya işle
+    const tahminlerRef = db.ref('tahminler');
+
+    tahminlerRef.on('value', (snapshot) => {
+      const data = snapshot.val();
+
+      // Eğer harita üzerinde daha önce işaretçi varsa temizle
+      if (window.tahminMarkers) {
+        window.tahminMarkers.forEach(marker => map.removeLayer(marker));
+      }
+      window.tahminMarkers = [];
+
+      if (data) {
+        Object.values(data).forEach(veri => {
+          const lat = parseFloat(veri.Lat);
+          const lon = parseFloat(veri.Lon);
+          const tahmin = parseInt(veri.Tahmin);
+
+          const renk = tahmin === 1 ? 'red' : 'green';
+
+          const marker = L.circleMarker([lat, lon], {
+            radius: 5,
+            color: renk,
+            fillColor: renk,
+            fillOpacity: 0.8
+          }).addTo(map).bindPopup(`Yol Durumu: ${tahmin === 1 ? "Bozuk" : "Düzgün"}`);
+
+          window.tahminMarkers.push(marker);
+        });
+      }
+    });
+  </script>
+  
+  <!-- üyelik bölümü bitiş -->
+
+  <!-- alt bilgi bölümü başlangıç -->
+
+  <section class="footer">
+    <div class="search">
+      <input type="text" class="search-input" placeholder="Ara" />
+      <button class="btn btn-primary">Search</button>
+    </div>
+    <div class="share">
+      <a href="https://www.instagram.com/ilbey.ms/" class="fab fa-instagram"></a>
+      <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjcyODEyMjc3LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"
+        class="fab fa-facebook"></a>
+      <a href="https://wa.me/qr/SWJH6IXDP5EDN1" class="fab fa-whatsapp"></a>
+    </div>
+    <div class="links">
+      <a href="/index.html">Ana Sayfa</a>
+      <a href="/pages/Vizyon.html">Vizyonumuz</a>
+      <a href="/pages/Yollar.html">Yollar</a>
+      <a href="/pages/Hakkında.html">Hakkımızda</a>
+      <a href="/pages/İletişim.html">İletişim</a>
+    </div>
+    <div class="credit">
+      © 2025 Sayfanın yapımcısı <span>İzletobu</span> |
+      <span style="color: yellow">Tüm haklar saklıdır.</span>
+    </div>
+  </section>
+
+  <!-- alt bilgi bölümü bitiş -->
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

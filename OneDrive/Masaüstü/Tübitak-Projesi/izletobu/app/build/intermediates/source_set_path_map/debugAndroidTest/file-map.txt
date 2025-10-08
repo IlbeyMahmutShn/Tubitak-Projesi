@@ -1,0 +1,4 @@
+izletobu.com.test.app-androidTest-0 C:\Users\Msahi\AndroidStudioProjects\izletobu\app\build\generated\res\resValues\androidTest\debug
+izletobu.com.test.app-mergeDebugAndroidTestResources-1 C:\Users\Msahi\AndroidStudioProjects\izletobu\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+izletobu.com.test.app-mergeDebugAndroidTestResources-2 C:\Users\Msahi\AndroidStudioProjects\izletobu\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+izletobu.com.test.app-merged_res-3 C:\Users\Msahi\AndroidStudioProjects\izletobu\app\build\intermediates\merged_res\debugAndroidTest
